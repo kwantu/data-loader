@@ -38,6 +38,9 @@
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
-    "source-map-support": "^0.4.0"
+    "source-map-support": "^0.4.0",
+    "q": "^1.5.0",
+    "sleep": "^5.1.0",
+    "xml2js": "^0.4.17"
   }
 }
