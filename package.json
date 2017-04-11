@@ -1,0 +1,48 @@
+{
+  "name": "data-loader",
+  "version": "1.0.0",
+  "description": "Kwantu data loader tool",
+  "main": "dist/loader.js",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "start": "node dist/loader.js DEV",
+    "build": "npm run clean && tsc -P tsconfig-prod.json",
+    "build:test": "webpack --config webpack.test.js",
+    "build:watch": "tsc -w & nodemon --watch dist/index.js --delay 0.25 dist/index.js DEV",
+    "test": "npm run build:test && mocha dist/test.js",
+    "test:debug": "npm run build:test && mocha dist/test.js --debug-brk=5982",
+    "test:watch": "webpack --config webpack.test.js -w & mocha dist/test.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwantu/data-loader.git"
+  },
+  "keywords": [
+    "kwantu",
+    "data",
+    "import",
+    "loader",
+    "load"
+  ],
+  "author": "Brent Gordon <brentgordon01@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kwantu/data-loader/issues"
+  },
+  "homepage": "https://github.com/kwantu/data-loader#readme",
+  "devDependencies": {
+    "@types/expect": "^1.20.1",
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.12",
+    "expect": "^1.14.0",
+    "mocha": "^2.4.5",
+    "nodemon": "^1.8.1",
+    "rimraf": "^2.5.1",
+    "tslint": "^3.3.0",
+    "typescript": "^2.2.1"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "source-map-support": "^0.4.0"
+  }
+}
