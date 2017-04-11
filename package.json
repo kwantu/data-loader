@@ -5,7 +5,7 @@
   "main": "dist/loader.js",
   "scripts": {
     "clean": "rimraf dist/",
-    "start": "node dist/loader.js DEV",
+    "start": "node dist/loader.js",
     "build": "npm run clean && tsc"
   },
   "repository": {
