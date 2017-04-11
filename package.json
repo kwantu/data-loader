@@ -6,12 +6,7 @@
   "scripts": {
     "clean": "rimraf dist/",
     "start": "node dist/loader.js DEV",
-    "build": "npm run clean && tsc -P tsconfig-prod.json",
-    "build:test": "webpack --config webpack.test.js",
-    "build:watch": "tsc -w & nodemon --watch dist/index.js --delay 0.25 dist/index.js DEV",
-    "test": "npm run build:test && mocha dist/test.js",
-    "test:debug": "npm run build:test && mocha dist/test.js --debug-brk=5982",
-    "test:watch": "webpack --config webpack.test.js -w & mocha dist/test.js -w"
+    "build": "npm run clean && tsc"
   },
   "repository": {
     "type": "git",
