@@ -1,3 +1,12 @@
 {
-    
+    "local": true,
+    "loaderName": "default",
+    "userName": "KWANTU_ADMIN_USERNAME",
+    "userPwd": "KWANTU_ADMIN_PASSWORD",
+    "ftpServer": "KWANTU_FTP_SERVER",
+    "ftpUser": "KWANTU_FTP_USER",
+    "ftpPwd": "KWANTU_FTP_PWD",
+    "ftpPath": "KWANTU_FTP_PATH",
+    "scheduleType": "IMMEDIATE",
+    "schedule": "00 */60 * * * *"
 }
