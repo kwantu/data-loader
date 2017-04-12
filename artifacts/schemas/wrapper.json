@@ -1,0 +1,148 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": true,
+    "definitions": {},
+    "id": "http://example.com/example.json",
+    "properties": {
+        "authors": {
+            "additionalItems": false,
+            "items": {
+                "additionalProperties": true,
+                "properties": {
+                    "clientId": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "profileId": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array",
+            "uniqueItems": false
+        },
+        "content": {
+            "additionalProperties": true,
+            "properties": {
+                "sequence": {
+                    "additionalProperties": true,
+                    "properties": {
+                        "current": {
+                            "type": "boolean"
+                        },
+                        "data": {
+                            "additionalProperties": true,
+                            "properties": {},
+                            "type": "object"
+                        },
+                        "locked": {
+                            "type": "boolean"
+                        },
+                        "number": {
+                            "type": "number"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "contributors": {
+            "additionalItems": false,
+            "items": {
+                "additionalProperties": true,
+                "properties": {
+                    "clientId": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "profileId": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array",
+            "uniqueItems": false
+        },
+        "id": {
+            "type": "string"
+        },
+        "links": {
+            "additionalItems": false,
+            "items": {
+                "additionalProperties": true,
+                "properties": {
+                    "refId": {
+                        "type": "string"
+                    },
+                    "rel": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array",
+            "uniqueItems": false
+        },
+        "metadata": {
+            "additionalItems": false,
+            "items": {
+                "additionalProperties": true,
+                "properties": {
+                    "key": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array",
+            "uniqueItems": false
+        },
+        "published": {
+            "type": "string"
+        },
+        "summary": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "type": {
+            "additionalProperties": true,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "schema": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "updated": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}

@@ -9,7 +9,9 @@ import * as request from './utils/request'
 import { IDataLoadingArray } from './interfaces/default'
 
 /**
+ * Main function used to execute the data loader process
  * 
+ * return {void}
  */
 function main(): void {
     // Create a new data loader array

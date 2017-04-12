@@ -2,13 +2,14 @@
     {
         "name": "importExistDBData",
         "description": "Import legacy XML data from eXist DB",
-        "type": "api",
-        "dataType": "xml",
+        "type": "api",               
         "options": {
             "hostname": "kwantu10.kwantu.net",
             "port": 8080,
             "endpoint": "/exist/rest/db/data/10004/workspace/10004-10002/editor/.feed.entry",
             "headers": {}
-        }
+        },
+        "dataType": "XML", 
+        "ingestor": "existdb"
     }
 ]

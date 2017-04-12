@@ -1,0 +1,51 @@
+{
+    "id": "",
+    "title": "",
+    "summary": "",
+    "published": "",
+    "updated": "",
+    "authors": [
+        {
+            "type": "",
+            "clientId": "",
+            "profileId": "",
+            "name": ""
+        }
+    ],
+    "contributors": [
+        {
+            "type": "",
+            "clientId": "",
+            "profileId": "",
+            "name": ""
+        }
+    ],
+    "links": [
+        {
+            "refId": "",
+            "rel": "",
+            "type": ""
+        }
+    ],
+    "type": {
+        "id": "",
+        "label": "",
+        "schema": ""
+    },
+    "metadata": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "content": {
+        "sequence": {
+            "number": 0,
+            "current": false,
+            "locked": false,
+            "data": {
+                
+            }
+        }
+    }
+}
