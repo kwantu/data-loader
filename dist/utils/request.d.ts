@@ -1,18 +1,6 @@
 /// <reference types="q" />
 import * as Q from 'Q';
-/**
- *
- *
- * @export
- * @interface IOptions
- */
-export interface IOptions {
-    hostname: string;
-    port: number;
-    method: string;
-    path: string;
-    headers: any;
-}
+import { IOptions } from '../interfaces/default';
 /**
  * Make an HTTP request
  *

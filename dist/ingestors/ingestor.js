@@ -8,28 +8,28 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const request = require("../utils/request");
-const log = require("../utils/log");
-function get(options) {
+const existdb = require("../ingestors/existdb");
+/**
+ *
+ *
+ * return {void}
+ */
+function getData(config, dataArray) {
     return __awaiter(this, void 0, void 0, function* () {
-        try {
-            log.info('Retrieving document list --> GET http://' + options.hostname + options.endpoint);
-            return yield request.httpExec({
-                hostname: options.hostname,
-                port: options.port,
-                method: 'GET',
-                path: options.endpoint,
-                headers: options.headers
-            });
-        }
-        catch (err) {
-            log.error(err);
-            throw new Error(err);
+        for (let ind = 0; ind < config.length; ind++) {
+            let conf = config[ind];
+            if (conf.type === 'api' && conf.ingestor === 'existdb') {
+                let data = yield existdb.get(conf.options);
+                dataArray.push({
+                    name: conf.name,
+                    type: conf.type,
+                    ingestor: conf.ingestor,
+                    data: data,
+                    dataType: conf.dataType
+                });
+            }
         }
     });
 }
-exports.get = get;
-function process(dataItem) {
-}
-exports.process = process;
-//# sourceMappingURL=existdb.js.map
+exports.getData = getData;
+//# sourceMappingURL=ingestor.js.map

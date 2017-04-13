@@ -1,6 +1,6 @@
 [
     {
-        "name": "importExistDBData",
+        "name": "ingestExistDBData",
         "description": "Import legacy XML data from eXist DB",
         "type": "api",               
         "options": {

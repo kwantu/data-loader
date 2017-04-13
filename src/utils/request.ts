@@ -4,19 +4,7 @@ import * as http from 'http'
 import * as https from 'https'
 import * as Q from 'Q'
 
-/**
- * 
- * 
- * @export
- * @interface IOptions
- */
-export interface IOptions {
-    hostname: string,
-    port: number,
-    method: string,
-    path: string,
-    headers: any
-}
+import { IOptions } from '../interfaces/default'
 
 /**
  * Make an HTTP request
@@ -25,7 +13,7 @@ export interface IOptions {
  * @param {IOptions} options
  * @param {any} postData
  */
-export function httpExec(options: IOptions, postData?: any){
+export function httpExec(options: IOptions, postData?: any): Q.Promise<{}> {
     const deferred = Q.defer();
     let req = http.request(options, (res) => {
         res.setEncoding('utf8');
